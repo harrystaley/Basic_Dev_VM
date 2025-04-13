@@ -1,63 +1,77 @@
 # Basic_Dev_VM
 
-## Project Overview
+## Overview
 
-Basic_Dev_VM is a project aimed at simplifying the setup process for developers by providing a streamlined virtual machine setup. This project offers essential tools and configurations that are necessary for a productive development environment. This project is ideal for developers who want to quickly get started on their projects without the hassle of manually setting up their development environments.
+Basic_Dev_VM is designed to simplify the setup process for developers by providing a pre-configured virtual machine (VM) that includes all the essential tools and configurations necessary for a productive development environment. This project aims to minimize the time and effort required to configure a development environment, allowing developers to focus on coding right away.
+
+### Project Structure
+
+The Basic_Dev_VM repository includes the following key components:
+
+- **Vagrantfile**: The main configuration file used by Vagrant to set up the virtual machine according to the specifications provided.
+- **Scripts/**: This directory contains all the necessary scripts to install and configure the various tools and software within the VM.
+- **Docs/**: Documentation files that provide additional information and guidance on using the virtual machine.
+- **Tools/**: A directory with setup files or scripts for various development tools and utilities that will be pre-installed in the VM.
 
 ## Setup and Installation
 
-To get started with Basic_Dev_VM, follow the steps below:
+### Prerequisites
 
-1. Clone the repository to your local machine.
-   ```
-   git clone https://github.com/username/Basic_Dev_VM.git
-   ```
-2. Navigate to the project directory.
-   ```
-   cd Basic_Dev_VM
-   ```
-3. Install the necessary dependencies. The dependencies required for this project are listed in the `requirements.txt` file. To install these dependencies, run the following command:
-   ```
-   pip install -r requirements.txt
-   ```
-4. Once the dependencies are installed, you can set up the virtual machine by running the setup script.
-   ```
-   ./setup.sh
-   ```
+Before you can use Basic_Dev_VM, you need to have the following software installed on your machine:
 
-## Usage Examples
+- **Vagrant**: An open-source software product for building and maintaining portable virtual software development environments.
+- **VirtualBox**: A free and open-source hosted hypervisor for x86 virtualization.
 
-Once you have the virtual machine set up, you can start using it for your development needs. Here are some examples of how you can use the Basic_Dev_VM:
+### Installation Steps
 
-- To start the virtual machine, run the following command:
-  ```
-  vagrant up
-  ```
-- To SSH into the virtual machine, use the following command:
-  ```
-  vagrant ssh
-  ```
-- To stop the virtual machine, use the following command:
-  ```
-  vagrant halt
-  ```
-- To destroy the virtual machine when you no longer need it, use the following command:
-  ```
-  vagrant destroy
-  ```
+1. **Install VirtualBox**:
+   - Download and install VirtualBox from [here](https://www.virtualbox.org/wiki/Downloads).
+   
+2. **Install Vagrant**:
+   - Download and install Vagrant from [here](https://www.vagrantup.com/downloads).
 
-## Contribution Guidelines
+3. **Clone the Repository**:
+   - Clone this repository to your local machine using:
+     ```
+     git clone https://github.com/yourusername/Basic_Dev_VM.git
+     ```
 
-We welcome contributions from the community. If you wish to contribute to this project, please follow the steps below:
+4. **Start the Virtual Machine**:
+   - Navigate to the directory containing the cloned repository and run:
+     ```
+     cd Basic_Dev_VM
+     vagrant up
+     ```
+
+## Usage
+
+Once the virtual machine is up and running, you can access it by running:
+
+```
+vagrant ssh
+```
+
+This command logs you into the virtual machine. Inside, you will find all the tools and configurations already set up as per the scripts in the `Scripts/` directory.
+
+### Example Workflow
+
+- Start the VM: `vagrant up`
+- SSH into the VM: `vagrant ssh`
+- Begin your development work within the VM environment.
+- Once finished, you can halt the VM by running: `vagrant halt`
+
+## Contributing
+
+Contributions to Basic_Dev_VM are welcome and appreciated! If you would like to contribute, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and commit them with a clear and descriptive commit message.
-4. Push your changes to your forked repository.
-5. Create a pull request, detailing the changes you've made and the reasons for them.
+2. Create a new branch for your feature (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request.
 
-Please ensure that your code adheres to our coding standards and that your commits are atomic, i.e., each commit represents a single logical change.
+Please make sure to update tests as appropriate.
 
 ## License
 
-This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
